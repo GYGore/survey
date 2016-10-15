@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Surveys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Zipcode</th>
+      <th>Distance</th>
+      <th>Willing to pay low</th>
+      <th>Willing to pay high</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surveys.each do |survey| %>
+      <tr>
+        <td><%= survey.zipcode %></td>
+        <td><%= survey.distance %></td>
+        <td><%= survey.willing_to_pay_low %></td>
+        <td><%= survey.willing_to_pay_high %></td>
+        <td><%= survey.comments %></td>
+        <td><%= link_to 'Show', survey %></td>
+        <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
+        <td><%= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Survey', new_survey_path %>

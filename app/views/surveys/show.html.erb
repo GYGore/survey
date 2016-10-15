@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @survey.zipcode %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @survey.distance %>
+</p>
+
+<p>
+  <strong>Willing to pay low:</strong>
+  <%= @survey.willing_to_pay_low %>
+</p>
+
+<p>
+  <strong>Willing to pay high:</strong>
+  <%= @survey.willing_to_pay_high %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @survey.comments %>
+</p>
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Back', surveys_path %>
